@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSS - Cypress</title>
+        <link rel="stylesheet" href="./style.css" />
+        <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <div class="sidebar">
+                <h2>CSS Selector</h2>
+                <button id="cvi" onclick="showPage(id)">Class vs Id</button>
+                <button id="fc" onclick="showPage(id)">First Child</button>
+                <button id="lc" onclick="showPage(id)">Last Child</button>
+                <button id="nc" onclick="showPage(id)">Nth Child</button>
+                <button id="nlc" onclick="showPage(id)">Nth Last Child</button>
+                <button id="not" onclick="showPage(id)">Nth Of Type</button>
+                <button id="nlot" onclick="showPage(id)">Nth Last Of Type</button>
+                <h2>CSS Combinator</h2>
+                <button id="ds" onclick="showPage(id)">Descendant Selector (Space)</button>
+                <button id="cs" onclick="showPage(id)">Child Selector (>)</button>
+                <button id="ass" onclick="showPage(id)">Adjacent sibling selector (+)</button>
+                <button id="gss" onclick="showPage(id)">General sibling selector (~)</button>
+                <h2>Mini Assignment</h2>
+                <button id="ma1" onclick="showPage(id)">CSS Selector assignment</button>
+                <button id="ma2" onclick="showPage(id)">CSS Combinator assignment</button>
+            </div>
+            <div class="page">
+                <div class="page__background">Choose example in sidebar!</div>
+                <div class="cvi">
+                    <h2>
+                        Phân biệt
+                        <span style="font-size: 24px; color: red"><i><b>class</b></i></span>
+                        và
+                        <span style="font-size: 24px; color: blue"><i><b>id</b></i></span>
+                    </h2>
+                    <div class="cvi-content">
+                        <div class="class">
+                        <h2>class</h2>
+                        <ul>
+                            <li class="drink">Cocacola</li>
+                            <li class="drink">Pepsi</li>
+                            <li class="drink">7 Up</li>
+                            <li class="drink">Spite</li>
+                            <li class="drink">Fanta</li>
+                        </ul>
+                        <span>Dùng hàm tìm kiếm ra được: </span>
+                        <span id="class__drink"></span>
+                        <p>
+                            1 class có thể dùng cho nhiều phần tử và ta có thể tìm ra tất cả
+                            các phần tử đó.
+                        </p>
+                        </div>
+                        <div class="id">
+                        <h3>id</h3>
+                        <ul>
+                            <li id="drink">Cocacola</li>
+                            <li id="drink">Pepsi</li>
+                            <li id="drink">7 Up</li>
+                            <li id="drink">Spite</li>
+                            <li id="drink">Fanta</li>
+                        </ul>
+                        <span>Dùng hàm tìm kiếm ra được: </span>
+                        <span id="id__drink"></span>
+                        <p>
+                            1 id chỉ có thể dùng cho 1 phần tử duy nhất, nếu dùng cho nhiều
+                            phần tử thì cũng không hỗ trợ tìm các phần tử khác ngoài phần tử
+                            đầu tiên sử dụng.
+                        </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="fc">
+                    <h3>First Child (:first-child)</h3>
+                    <span>Ví dụ này sẽ chọn toàn bộ các <i><b>p</b></i> mà là phần tử đầu tiên của mỗi Block</span>
+                    <div class="pl20">
+                        <p>Thẻ p 1.1</p>
+                        <p>Thẻ p 1.2</p>
+                        <p>Thẻ p 1.3</p>
+                    </div>
+                </div>
+                <div class="lc">
+                    <h3>Last Child (:last-child)</h3>
+                    <span>Ví dụ này sẽ chọn toàn bộ các <i><b>p</b></i> mà là phần tử cuối cùng của mỗi Block</span>
+                    <div class="pl20">
+                        <p>Thẻ p 1.1</p>
+                        <p>Thẻ p 1.2</p>
+                        <p>Thẻ p 1.3</p>
+                    </div>
+                </div>
+                <div class="nc">
+                    <h3>Nth-child (:nth-child(n))</h3>
+                    <span>Ví dụ này sẽ chọn toàn bộ các <i><b>p</b></i> mà là phần tử thứ 2 của mỗi Block</span>
+                    <div id="nc1" class="pl20">
+                        <p>Thẻ p 1.1</p>
+                        <p>Thẻ p 1.2</p>
+                        <p>Thẻ p 1.3</p>
+                        <p>Thẻ p 1.4</p>
+                    </div>
+                    <span class="ml-20">Có thể điền "odd" hoặc "even" (Trường hợp này là "odd")</span>
+                    <div id="nc2"  class="pl20">
+                        <p>Thẻ p 2.1</p>
+                        <p>Thẻ p 2.2</p>
+                        <p>Thẻ p 2.3</p>
+                        <p>Thẻ p 2.4</p>
+                        <p>Thẻ p 2.5</p>
+                        <p>Thẻ p 2.6</p>
+                    </div>
+                    <span class="ml-20">Có thể điền dưới dạng biểu thức (ví dụ: n+4, n sẽ tính từ 0 ->∞)</span>
+                    <div id="nc3"  class="pl20">
+                        <p>Thẻ p 3.1</p>
+                        <p>Thẻ p 3.2</p>
+                        <p>Thẻ p 3.3</p>
+                        <p>Thẻ p 3.4</p>
+                        <p>Thẻ p 3.5</p>
+                        <p>Thẻ p 3.6</p>
+                    </div>
+                </div>
+                <div class="nlc">
+                    <h3>Nth Last Child (nth-last-child(n))</h3>
+                    <span>Ví dụ này sẽ chọn toàn bộ các <i><b>p</b></i> mà là phần tử thứ 2 từ dưới lên của mỗi Block</span>
+                    <div class="pl20">
+                        <p>Thẻ p 1.1</p>
+                        <p>Thẻ p 1.2</p>
+                        <p>Thẻ p 1.3</p>
+                        <p>Thẻ p 1.4</p>
+                    </div>
+                </div>
+                <div class="not">
+                    <h3>Nth Of Type (nth-of-type(n))</h3>
+                    <span>Ví dụ này sẽ chọn toàn bộ các <i><b>p</b></i> thứ 2 trong mỗi block (chỉ so sánh các <i><b>p</b></i> với nhau)</span>
+                    <div class="pl20">
+                        <p>Thẻ p 1.1</p>
+                        <p>Thẻ p 1.2</p>
+                        <p>Thẻ p 1.3</p>
+                        <p>Thẻ p 1.4</p>
+                    </div>
+                </div>
+                <div class="nlot">
+                    <h3>Nth Last Of Type (nth-last-of-type(n))</h3>
+                    <span>Ví dụ này sẽ chọn toàn bộ các <i><b>p</b></i> thứ 2 từ dưới lên trong mỗi block (chỉ so sánh các <i><b>p</b></i> với nhau)</span>
+                    <div class="pl20">
+                        <p>Thẻ p 1.1</p>
+                        <p>Thẻ p 1.2</p>
+                        <p>Thẻ p 1.3</p>
+                        <p>Thẻ p 1.4</p>
+                    </div>
+                </div>
+                <div class="ds">
+                    <h3>Descendant Selector (element1 element2)</h3>
+                    <span>Ví dụ này sẽ chọn tất cả các <i><b>p</b></i> bên trong thẻ <i><b>div</b></i> được chỉ định</span>
+                    <div class="pl20">
+                        <p>Thẻ p 1.1</p>
+                        <p>Thẻ p 1.2</p>
+                        <p>Thẻ p 1.3</p>
+                        <p>Thẻ p 1.4</p>
+                    </div>
+                </div>
+                <div class="cs">
+                    <h3>Child Selector (element1 > element2)</h3>
+                    <span>Ví dụ này sẽ chỉ chọn các <i><b>p</b></i> là con của thẻ <i><b>div</b></i> được chỉ định</span>
+                    <p class="pl20">Thẻ p 1.1</p>
+                    <p class="pl20">Thẻ p 1.2</p>
+                    <p class="pl20">Thẻ p 1.3</p>
+                    <p class="pl20">Thẻ p 1.4</p>
+                    <span>Các thẻ bên dưới nằm trong thẻ <i><b>div</b></i> là con của thẻ <i><b>div</b></i> được chỉ định</span>
+                    <div class="pl20">
+                        <p>Thẻ p 2.1</p>
+                        <p>Thẻ p 2.2</p>
+                        <p>Thẻ p 2.3</p>
+                        <p>Thẻ p 2.4</p>
+                    </div>
+                </div>
+                <div class="ass">
+                    <h3>Adjacent Sibling Selector (element1 + element2)</h3>
+                    <span>Ví dụ này sẽ chọn <i><b>p</b></i> ngay sau thẻ <i><b>div</b></i> được chỉ định</span>
+                    <div class="div-example pl20">Đây là div</div>
+                    <p class="pl20">Thẻ p 1.1</p>
+                    <p class="pl20">Thẻ p 1.2</p>
+                    <p class="pl20">Thẻ p 1.3</p>
+                    <p class="pl20">Thẻ p 1.4</p>
+                </div>
+                <div class="gss">
+                    <h3>General Sibling Selector (element1 ~ element2)</h3>
+                    <span>Ví dụ này sẽ chọn tất cả các <i><b>p</b></i> phía sau thẻ <i><b>div</b></i> được chỉ định</span>
+                    <div class="div-example pl20">Đây là div</div>
+                    <p class="pl20">Thẻ p 1.1</p>
+                    <p class="pl20">Thẻ p 1.2</p>
+                    <p class="pl20">Thẻ p 1.3</p>
+                    <p class="pl20">Thẻ p 1.4</p>
+                </div>
+                <div class="ma1">
+                    <p>Làm cho các chữ trong thẻ <i><b>p</b></i> ở vị trí chia hết cho 3 thành màu <span class="drink">đỏ</span>:</p>
+                    <div class="ma1__block">
+                        <div class="ma1__block__do-assignment">
+                            <div class="code">
+                                <span>p:</span>
+                                <div class="custom">
+                                    <input type="text" id="ma1__answer" class="custom-input" placeholder=" ">
+                                    <label for="answer" class="custom-label">Answer</label>
+                                </div> 
+                                <span>{</span>
+                                </br>
+                                <span class="tabs__html"></span><span> color: red;</span>
+                                </br>
+                                <span>}</span>
+                            </div>
+                            <div class="submit">
+                                <button id="submit__button" onclick="ma1Submit()">Submit</button>
+                            </div>
+                        </div>
+                        <div class="ma1__block__check">
+                            <span id="ma1__correct">&#10003;</span>
+                            <span id="ma1__wrong">&#10008;</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="ma2">
+                    <p>Sử dụng CSS Combinator để hoàn thành mong muốn:</p>
+                    <div class="ma2__block pl20">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="ma2__html">
+                                        File HTML:
+                                        <div class="ma2__html__code">
+                                            &lt;ul&gt;
+                                            </br>
+                                            <span class="tabs__html"></span>&lt;li class="item"&gt;Item1&lt;/li&gt;
+                                            </br>
+                                            <span class="tabs__html"></span>&lt;li class="item"&gt;Item2&lt;/li&gt;
+                                            </br>
+                                            <span class="tabs__html"></span>&lt;li class="item"&gt;Item3&lt;/li&gt;
+                                            </br>
+                                            <span class="tabs__html"></span>&lt;li class="item"&gt;Item4&lt;/li&gt;
+                                            </br>
+                                            <span class="tabs__html"></span>&lt;li class="item"&gt;Item5&lt;/li&gt;
+                                            </br>
+                                            &lt;/ul&gt;
+                                        </div>
+                                    </div>
+                                </td>
+                            <td>
+                                <div class="expected">
+                                    <span>Mong muốn:</span>
+                                    </br>
+                                    <img src="./expected.png" alt="expected">
+                                </div>
+                            </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="ma2__css">
+                                        File CSS:
+                                        <div class="ma2__block">
+                                            <div class="ma2__css__code__form">
+                                                <div class="ma2__css__code">
+                                                    <div class="class__item">
+                                                        <span>.item {</span>
+                                                        </br>
+                                                        <span class="tabs__html"></span>list-style: none;
+                                                        </br>
+                                                        <span class="tabs__html"></span>margin-top: 5px;
+                                                        </br>
+                                                        <span>}</sp>
+                                                    </div>
+                                                    <div class="using__combinator">
+                                                        <div class="custom">
+                                                            <input type="text" id="ma2__answer" class="custom-input" placeholder=" ">
+                                                            <label for="answer" class="custom-label">Answer</label>
+                                                        </div>
+                                                        <span>{</span>
+                                                        </br>
+                                                        <span class="tabs__html"></span>border-top: 1px solid grey;
+                                                        </br>
+                                                        <span>}</span>
+                                                    </div>
+                                                </div>
+                                                <div class="submit">
+                                                    <button id="submit__button2" onclick="ma2Submit()">Submit</button>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </td>
+                                <td id="actual">
+                                    <div class="actual">
+                                        <span>Thực tế:</span>
+                                        <ul class="ulItem">
+                                            <li class="item">Item1</li>
+                                            <li class="item">Item2</li>
+                                            <li class="item">Item3</li>
+                                            <li class="item">Item4</li>
+                                            <li class="item">Item5</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
