@@ -14,66 +14,101 @@
     <body>
         <div class="container">
             <div class="sidebar">
-                <h2>CSS Selector</h2>
-                <button id="cvi" onclick="showPage(id)">Class vs Id</button>
-                <button id="fc" onclick="showPage(id)">First Child</button>
-                <button id="lc" onclick="showPage(id)">Last Child</button>
-                <button id="nc" onclick="showPage(id)">Nth Child</button>
-                <button id="nlc" onclick="showPage(id)">Nth Last Child</button>
-                <button id="not" onclick="showPage(id)">Nth Of Type</button>
-                <button id="nlot" onclick="showPage(id)">Nth Last Of Type</button>
-                <h2>CSS Combinator</h2>
-                <button id="ds" onclick="showPage(id)">Descendant Selector (Space)</button>
-                <button id="cs" onclick="showPage(id)">Child Selector (>)</button>
-                <button id="ass" onclick="showPage(id)">Adjacent sibling selector (+)</button>
-                <button id="gss" onclick="showPage(id)">General sibling selector (~)</button>
-                <h2>Mini Assignment</h2>
-                <button id="ma1" onclick="showPage(id)">CSS Selector assignment</button>
-                <button id="ma2" onclick="showPage(id)">CSS Combinator assignment</button>
+                <button id="css-selector" class="sidebar-button" onclick="showList(id)">
+                    <span>CSS Selector</span>
+                    <div id="css-selector-arrow"></div>
+                </button>
+                <div id="css-selector-list" class="css-list">
+                    <ul>
+                        <li id="cvi" class="css-list__item" onclick="showPage(id)">Class vs Id</li>
+                        <li id="fc" class="css-list__item" onclick="showPage(id)">First Child</li>
+                        <li id="lc" class="css-list__item" onclick="showPage(id)">Last Child</li>
+                        <li id="nc" class="css-list__item" onclick="showPage(id)">Nth Child</li>
+                        <li id="nlc" class="css-list__item" onclick="showPage(id)">Nth Last Child</li>
+                        <li id="not" class="css-list__item" onclick="showPage(id)">Nth Of Type</li>
+                        <li id="nlot" class="css-list__item" onclick="showPage(id)">Nth Last Of Type</li>
+                    </ul>
+                </div>
+
+                <button id="css-combinator" class="sidebar-button" onclick="showList(id)">
+                    <span>CSS Combinator</span>
+                    <div id="css-combinator-arrow"></div>
+                </button>
+                <div id="css-combinator-list" class="css-list">
+                    <ul>
+                        <li id="ds" class="css-list__item" onclick="showPage(id)">Descendant Selector (Space)</li>
+                        <li id="cs" class="css-list__item" onclick="showPage(id)">Child Selector (>)</li>
+                        <li id="ass" class="css-list__item" onclick="showPage(id)">Adjacent sibling selector (+)</li>
+                        <li id="gss" class="css-list__item" onclick="showPage(id)">General sibling selector (~)</li>
+                    </ul>
+                </div>
+
+                <button id="css-assignment" class="sidebar-button" onclick="showList(id)">
+                    <span>Mini Assignment</span>
+                    <div id="css-assignment-arrow"></div>
+                </button>
+                <div id="css-assignment-list" class="css-list">
+                    <ul>
+                        <li id="ma1" class="css-list__item" onclick="showPage(id)">CSS Selector Assignment</li>
+                        <li id="ma2" class="css-list__item" onclick="showPage(id)">CSS Combinator Assignment</li>
+                    </ul>
+                </div>
             </div>
             <div class="page">
-                <div class="page__background">Choose example in sidebar!</div>
+                <div class="page__background">Welcome to CSS tutorial!</div>
                 <div class="cvi">
                     <h2>
-                        Phân biệt
+                        Distinguish between
                         <span style="font-size: 24px; color: red"><i><b>class</b></i></span>
-                        và
+                        and
                         <span style="font-size: 24px; color: blue"><i><b>id</b></i></span>
                     </h2>
                     <div class="cvi-content">
-                        <div class="class">
-                        <h2>class</h2>
-                        <ul>
-                            <li class="drink">Cocacola</li>
-                            <li class="drink">Pepsi</li>
-                            <li class="drink">7 Up</li>
-                            <li class="drink">Spite</li>
-                            <li class="drink">Fanta</li>
-                        </ul>
-                        <span>Dùng hàm tìm kiếm ra được: </span>
-                        <span id="class__drink"></span>
-                        <p>
-                            1 class có thể dùng cho nhiều phần tử và ta có thể tìm ra tất cả
-                            các phần tử đó.
-                        </p>
-                        </div>
-                        <div class="id">
-                        <h3>id</h3>
-                        <ul>
-                            <li id="drink">Cocacola</li>
-                            <li id="drink">Pepsi</li>
-                            <li id="drink">7 Up</li>
-                            <li id="drink">Spite</li>
-                            <li id="drink">Fanta</li>
-                        </ul>
-                        <span>Dùng hàm tìm kiếm ra được: </span>
-                        <span id="id__drink"></span>
-                        <p>
-                            1 id chỉ có thể dùng cho 1 phần tử duy nhất, nếu dùng cho nhiều
-                            phần tử thì cũng không hỗ trợ tìm các phần tử khác ngoài phần tử
-                            đầu tiên sử dụng.
-                        </p>
-                        </div>
+                        <table style="width: 80%; text-align: left; margin: 0 auto">
+                            <tr>
+                                <th style="width: 30%"></th>
+                                <th style="width: 35%; text-align: center">class</th>
+                                <th style="width: 35%; text-align: center">id</th>
+                            </tr>
+                            <tr>
+                                <td>Purpose</td>
+                                <td>The <span style="font-size: 18px; color: red"><i><b>class</b></i></span> attribute can be used for different types of HTML tags at the same time.</td>
+                                <td>The <span style="font-size: 18px; color: blue"><i><b>id</b></i></span> attribute can be used for just one HTML tag.</td>
+                            </tr>
+                            <tr>
+                                <td>Example</td>
+                                <td>
+                                    &lt;ul&gt;
+                                        </br>
+                                        <span class="tabs__html"></span>&lt;li class="item"&gt;Item1&lt;/li&gt;
+                                        </br>
+                                        <span class="tabs__html"></span>&lt;li class="item"&gt;Item2&lt;/li&gt;
+                                        </br>
+                                        <span class="tabs__html"></span>&lt;li class="item"&gt;Item3&lt;/li&gt;
+                                        </br>
+                                        <span class="tabs__html"></span>&lt;li class="item"&gt;Item4&lt;/li&gt;
+                                        </br>
+                                        <span class="tabs__html"></span>&lt;li class="item"&gt;Item5&lt;/li&gt;
+                                        </br>
+                                    &lt;/ul&gt;
+                                </td>
+                                <td>
+                                    &lt;ul&gt;
+                                        </br>
+                                        <span class="tabs__html"></span>&lt;li id="item1"&gt;Item1&lt;/li&gt;
+                                        </br>
+                                        <span class="tabs__html"></span>&lt;li id="item2"&gt;Item2&lt;/li&gt;
+                                        </br>
+                                        <span class="tabs__html"></span>&lt;li id="item3"&gt;Item3&lt;/li&gt;
+                                        </br>
+                                        <span class="tabs__html"></span>&lt;li id="item4"&gt;Item4&lt;/li&gt;
+                                        </br>
+                                        <span class="tabs__html"></span>&lt;li id="item5"&gt;Item5&lt;/li&gt;
+                                        </br>
+                                    &lt;/ul&gt;
+                                </td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
                 <div class="fc">
@@ -310,5 +345,6 @@
         </div>
 
         <script src="script.js"></script>
+        <script src="sidebar.js"></script>
     </body>
 </html>
