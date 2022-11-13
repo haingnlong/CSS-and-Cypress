@@ -79,32 +79,32 @@
                                 <td>Example</td>
                                 <td>
                                     &lt;ul&gt;
-                                        </br>
-                                        <span class="tabs__html"></span>&lt;li class="item"&gt;Item1&lt;/li&gt;
-                                        </br>
-                                        <span class="tabs__html"></span>&lt;li class="item"&gt;Item2&lt;/li&gt;
-                                        </br>
-                                        <span class="tabs__html"></span>&lt;li class="item"&gt;Item3&lt;/li&gt;
-                                        </br>
-                                        <span class="tabs__html"></span>&lt;li class="item"&gt;Item4&lt;/li&gt;
-                                        </br>
-                                        <span class="tabs__html"></span>&lt;li class="item"&gt;Item5&lt;/li&gt;
-                                        </br>
+                                    </br>
+                                    <span class="tabs__html"></span>&lt;li class="item"&gt;Item1&lt;/li&gt;
+                                    </br>
+                                    <span class="tabs__html"></span>&lt;li class="item"&gt;Item2&lt;/li&gt;
+                                    </br>
+                                    <span class="tabs__html"></span>&lt;li class="item"&gt;Item3&lt;/li&gt;
+                                    </br>
+                                    <span class="tabs__html"></span>&lt;li class="item"&gt;Item4&lt;/li&gt;
+                                    </br>
+                                    <span class="tabs__html"></span>&lt;li class="item"&gt;Item5&lt;/li&gt;
+                                    </br>
                                     &lt;/ul&gt;
                                 </td>
                                 <td>
                                     &lt;ul&gt;
-                                        </br>
-                                        <span class="tabs__html"></span>&lt;li id="item1"&gt;Item1&lt;/li&gt;
-                                        </br>
-                                        <span class="tabs__html"></span>&lt;li id="item2"&gt;Item2&lt;/li&gt;
-                                        </br>
-                                        <span class="tabs__html"></span>&lt;li id="item3"&gt;Item3&lt;/li&gt;
-                                        </br>
-                                        <span class="tabs__html"></span>&lt;li id="item4"&gt;Item4&lt;/li&gt;
-                                        </br>
-                                        <span class="tabs__html"></span>&lt;li id="item5"&gt;Item5&lt;/li&gt;
-                                        </br>
+                                    </br>
+                                    <span class="tabs__html"></span>&lt;li id="item1"&gt;Item1&lt;/li&gt;
+                                    </br>
+                                    <span class="tabs__html"></span>&lt;li id="item2"&gt;Item2&lt;/li&gt;
+                                    </br>
+                                    <span class="tabs__html"></span>&lt;li id="item3"&gt;Item3&lt;/li&gt;
+                                    </br>
+                                    <span class="tabs__html"></span>&lt;li id="item4"&gt;Item4&lt;/li&gt;
+                                    </br>
+                                    <span class="tabs__html"></span>&lt;li id="item5"&gt;Item5&lt;/li&gt;
+                                    </br>
                                     &lt;/ul&gt;
                                 </td>
                             </tr>
@@ -113,125 +113,525 @@
                 </div>
                 <div class="fc">
                     <h3>First Child (:first-child)</h3>
-                    <span>Ví dụ này sẽ chọn toàn bộ các <i><b>p</b></i> mà là phần tử đầu tiên của mỗi Block</span>
-                    <div class="pl20">
-                        <p>Thẻ p 1.1</p>
-                        <p>Thẻ p 1.2</p>
-                        <p>Thẻ p 1.3</p>
+                    <span>Select and style every <i><b>p</b></i> element that is the <i><b>first child</b></i> of its parent (in this case <i><b>p</b></i>'s parent is <i><b>div</b></i>)</span>
+                    <div class="example">
+                        <div class="code-file">
+                            <div class="html-file">
+                                <div class="html-file__label">HTML File:</div>
+                                <div class="html-file__code">
+                                    &lt;div&gt;
+                                    </br>
+                                    <span class="tabs__html"></span>&lt;p&gt;Paragraph1&lt;/p&gt;
+                                    </br>
+                                    <span class="tabs__html"></span>&lt;p&gt;Paragraph2&lt;/p&gt;
+                                    </br>
+                                    <span class="tabs__html"></span>&lt;p&gt;Paragraph3&lt;/p&gt;
+                                    </br>
+                                    &lt;/div&gt;
+                                </div>
+                            </div>
+                            <div class="css-file">
+                                <div class="css-file__label">CSS File:</div>
+                                <div class="css-file__code">
+                                    p:first-child {
+                                    </br>
+                                    <span class="tabs__html"></span>color: <div class="block-color"></div>red;
+                                    </br>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <div class="example-result">
+                            <div class="example-result__label">Result:</div>
+                            <div class="example-result__show">
+                                <p>Paragraph1</p>
+                                <p>Paragraph2</p>
+                                <p>Paragraph3</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="lc">
                     <h3>Last Child (:last-child)</h3>
-                    <span>Ví dụ này sẽ chọn toàn bộ các <i><b>p</b></i> mà là phần tử cuối cùng của mỗi Block</span>
-                    <div class="pl20">
-                        <p>Thẻ p 1.1</p>
-                        <p>Thẻ p 1.2</p>
-                        <p>Thẻ p 1.3</p>
+                    <span>Select and style every <i><b>p</b></i> element that is the <i><b>last child</b></i>  of its parent (in this case <i><b>p</b></i>'s parent is <i><b>div</b></i>)</span>
+                    <div class="example">
+                        <div class="code-file">
+                            <div class="html-file">
+                                <div class="html-file__label">HTML File:</div>
+                                <div class="html-file__code">
+                                    &lt;div&gt;
+                                    </br>
+                                    <span class="tabs__html"></span>&lt;p&gt;Paragraph1&lt;/p&gt;
+                                    </br>
+                                    <span class="tabs__html"></span>&lt;p&gt;Paragraph2&lt;/p&gt;
+                                    </br>
+                                    <span class="tabs__html"></span>&lt;p&gt;Paragraph3&lt;/p&gt;
+                                    </br>
+                                    &lt;/div&gt;
+                                </div>
+                            </div>
+                            <div class="css-file">
+                                <div class="css-file__label">CSS File:</div>
+                                <div class="css-file__code">
+                                    p:last-child {
+                                    </br>
+                                    <span class="tabs__html"></span>color: <div class="block-color"></div>red;
+                                    </br>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <div class="example-result">
+                            <div class="example-result__label">Result:</div>
+                            <div class="example-result__show">
+                                <p>Paragraph1</p>
+                                <p>Paragraph2</p>
+                                <p>Paragraph3</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="nc">
-                    <h3>Nth-child (:nth-child(n))</h3>
-                    <span>Ví dụ này sẽ chọn toàn bộ các <i><b>p</b></i> mà là phần tử thứ 2 của mỗi Block</span>
-                    <div id="nc1" class="pl20">
-                        <p>Thẻ p 1.1</p>
-                        <p>Thẻ p 1.2</p>
-                        <p>Thẻ p 1.3</p>
-                        <p>Thẻ p 1.4</p>
+                    <h3>Nth Child (:nth-child(n))</h3>
+                    <span>This selector matches every element that is the <i><b>n</b></i>th child of its parent.</span>
+                    </br>
+                    <span><i><b>n</b></i> can be a number, a keyword(<i><b>odd</b></i> or <i><b>even</b></i>), ir a formula(<i><b>an + b</b></i>).</span>
+                    <div class="nc__example">
+                        <div class="nc__html-file">
+                            <div class="nc__html-file__label">HTML File:</div>
+                            <div class="nc__html-file__code">
+                                &lt;div&gt;
+                                </br>
+                                <span class="tabs__html"></span>&lt;p&gt;Paragraph1&lt;/p&gt;
+                                </br>
+                                <span class="tabs__html"></span>&lt;p&gt;Paragraph2&lt;/p&gt;
+                                </br>
+                                <span class="tabs__html"></span>&lt;p&gt;Paragraph3&lt;/p&gt;
+                                </br>
+                                <span class="tabs__html"></span>&lt;p&gt;Paragraph4&lt;/p&gt;
+                                </br>
+                                <span class="tabs__html"></span>&lt;p&gt;Paragraph5&lt;/p&gt;
+                                </br>
+                                <span class="tabs__html"></span>&lt;p&gt;Paragraph6&lt;/p&gt;
+                                </br>
+                                &lt;/div&gt;
+                            </div>
+                        </div>
+                        <div class="nc__plus-icon"></br>+</div>
+                        <div class="nc__css-file">
+                            <div class="nc__css-label">CSS File:</div>
+                            <div class="nc__css-code">
+                                <button class="nc__css-style" id="style-1" onclick="ncButtonStyle(id)">
+                                    p:nth-child(2) {
+                                    </br>
+                                    <span class="tabs__html"></span>color: <div class="block-color"></div>red;
+                                    </br>
+                                    }
+                                </button>
+                                <button class="nc__css-style" id="style-2" onclick="ncButtonStyle(id)">
+                                    p:nth-child(odd) {
+                                    </br>
+                                    <span class="tabs__html"></span>color: <div class="block-color"></div>red;
+                                    </br>
+                                    }
+                                </button>
+                                <button class="nc__css-style" id="style-3" onclick="ncButtonStyle(id)">
+                                    p:nth-child(n + 4) {
+                                    </br>
+                                    <span class="tabs__html"></span>color: <div class="block-color"></div>red;
+                                    </br>
+                                    }
+                                </button>
+                            </div>
+                        </div>
+                        <div class="nc__rightwards-arrow-icon"></br>&#8594;</div>
+                        <div class="example-result">
+                            <div class="example-result__label">Result:</div>
+                            <div id="style-1-result">
+                                <p>Paragraph1</p>
+                                <p>Paragraph2</p>
+                                <p>Paragraph3</p>
+                                <p>Paragraph4</p>
+                                <p>Paragraph5</p>
+                                <p>Paragraph6</p>
+                            </div>
+                            <div id="style-2-result">
+                                <p>Paragraph1</p>
+                                <p>Paragraph2</p>
+                                <p>Paragraph3</p>
+                                <p>Paragraph4</p>
+                                <p>Paragraph5</p>
+                                <p>Paragraph6</p>
+                            </div>
+                            <div id="style-3-result">
+                                <p>Paragraph1</p>
+                                <p>Paragraph2</p>
+                                <p>Paragraph3</p>
+                                <p>Paragraph4</p>
+                                <p>Paragraph5</p>
+                                <p>Paragraph6</p>
+                            </div>
+                        </div>
                     </div>
-                    <span class="ml-20">Có thể điền "odd" hoặc "even" (Trường hợp này là "odd")</span>
-                    <div id="nc2"  class="pl20">
-                        <p>Thẻ p 2.1</p>
-                        <p>Thẻ p 2.2</p>
-                        <p>Thẻ p 2.3</p>
-                        <p>Thẻ p 2.4</p>
-                        <p>Thẻ p 2.5</p>
-                        <p>Thẻ p 2.6</p>
-                    </div>
-                    <span class="ml-20">Có thể điền dưới dạng biểu thức (ví dụ: n+4, n sẽ tính từ 0 ->∞)</span>
-                    <div id="nc3"  class="pl20">
-                        <p>Thẻ p 3.1</p>
-                        <p>Thẻ p 3.2</p>
-                        <p>Thẻ p 3.3</p>
-                        <p>Thẻ p 3.4</p>
-                        <p>Thẻ p 3.5</p>
-                        <p>Thẻ p 3.6</p>
-                    </div>
+                    
                 </div>
                 <div class="nlc">
-                    <h3>Nth Last Child (nth-last-child(n))</h3>
-                    <span>Ví dụ này sẽ chọn toàn bộ các <i><b>p</b></i> mà là phần tử thứ 2 từ dưới lên của mỗi Block</span>
-                    <div class="pl20">
-                        <p>Thẻ p 1.1</p>
-                        <p>Thẻ p 1.2</p>
-                        <p>Thẻ p 1.3</p>
-                        <p>Thẻ p 1.4</p>
+                    <h3>Nth Last Child (:nth-last-child(n))</h3>
+                    <span>This selector matches every element that is the <i><b>n</b></i>th child of its parent, <i><b>counting from the last child</b></i>.</span>
+                    </br>
+                    <span><i><b>n</b></i> can be a number, a keyword(<i><b>odd</b></i> or <i><b>even</b></i>), ir a formula(<i><b>an + b</b></i>).</span>
+                    <div class="example">
+                        <div class="code-file">
+                            <div class="html-file">
+                                <div class="html-file__label">HTML File:</div>
+                                <div class="html-file__code">
+                                    &lt;div&gt;
+                                    </br>
+                                    <span class="tabs__html"></span>&lt;p&gt;Paragraph1&lt;/p&gt;
+                                    </br>
+                                    <span class="tabs__html"></span>&lt;p&gt;Paragraph2&lt;/p&gt;
+                                    </br>
+                                    <span class="tabs__html"></span>&lt;p&gt;Paragraph3&lt;/p&gt;
+                                    </br>
+                                    <span class="tabs__html"></span>&lt;p&gt;Paragraph4&lt;/p&gt;
+                                    </br>
+                                    &lt;/div&gt;
+                                </div>
+                            </div>
+                            <div class="css-file">
+                                <div class="css-file__label">CSS File:</div>
+                                <div class="css-file__code">
+                                    p:nth-last-child(2) {
+                                    </br>
+                                    <span class="tabs__html"></span>color: <div class="block-color"></div>red;
+                                    </br>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <div class="example-result">
+                            <div class="example-result__label">Result:</div>
+                            <div class="example-result__show">
+                                <p>Paragraph1</p>
+                                <p>Paragraph2</p>
+                                <p>Paragraph3</p>
+                                <p>Paragraph4</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="not">
-                    <h3>Nth Of Type (nth-of-type(n))</h3>
-                    <span>Ví dụ này sẽ chọn toàn bộ các <i><b>p</b></i> thứ 2 trong mỗi block (chỉ so sánh các <i><b>p</b></i> với nhau)</span>
-                    <div class="pl20">
-                        <p>Thẻ p 1.1</p>
-                        <p>Thẻ p 1.2</p>
-                        <p>Thẻ p 1.3</p>
-                        <p>Thẻ p 1.4</p>
+                    <h3>Nth Of Type (:nth-of-type(n))</h3>
+                    <span>This selector matches every element that is the <i><b>n</b></i>th child, <i><b>of the same type (tag name)</b></i>, of its parent.</span>
+                    </br>
+                    <span><i><b>n</b></i> can be a number, a keyword(<i><b>odd</b></i> or <i><b>even</b></i>), ir a formula(<i><b>an + b</b></i>).</span>
+                    <div class="example">
+                        <div class="code-file">
+                            <div class="html-file">
+                                <div class="html-file__label">HTML File:</div>
+                                <div class="html-file__code">
+                                    &lt;div&gt;
+                                    </br>
+                                    <span class="tabs__html"></span>&lt;p&gt;Paragraph1&lt;/p&gt;
+                                    </br>
+                                    <span class="tabs__html"></span>&lt;p&gt;Paragraph2&lt;/p&gt;
+                                    </br>
+                                    <span class="tabs__html"></span>&lt;p&gt;Paragraph3&lt;/p&gt;
+                                    </br>
+                                    <span class="tabs__html"></span>&lt;p&gt;Paragraph4&lt;/p&gt;
+                                    </br>
+                                    &lt;/div&gt;
+                                </div>
+                            </div>
+                            <div class="css-file">
+                                <div class="css-file__label">CSS File:</div>
+                                <div class="css-file__code">
+                                    p:nth-last-child(2) {
+                                    </br>
+                                    <span class="tabs__html"></span>color: <div class="block-color"></div>red;
+                                    </br>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <div class="example-result">
+                            <div class="example-result__label">Result:</div>
+                            <div class="example-result__show">
+                                <p>Paragraph1</p>
+                                <p>Paragraph2</p>
+                                <p>Paragraph3</p>
+                                <p>Paragraph4</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="nlot">
-                    <h3>Nth Last Of Type (nth-last-of-type(n))</h3>
-                    <span>Ví dụ này sẽ chọn toàn bộ các <i><b>p</b></i> thứ 2 từ dưới lên trong mỗi block (chỉ so sánh các <i><b>p</b></i> với nhau)</span>
-                    <div class="pl20">
-                        <p>Thẻ p 1.1</p>
-                        <p>Thẻ p 1.2</p>
-                        <p>Thẻ p 1.3</p>
-                        <p>Thẻ p 1.4</p>
+                    <h3>Nth Last Of Type (:nth-last-of-type(n))</h3>
+                    <span>This selector matches every element that is the <i><b>n</b></i>th child, <i><b>of the same type (tag name)</b></i>, of its parent, <i><b>counting from the last child</b></i>.</span>
+                    </br>
+                    <span><i><b>n</b></i> can be a number, a keyword(<i><b>odd</b></i> or <i><b>even</b></i>), ir a formula(<i><b>an + b</b></i>).</span>
+                    <div class="example">
+                        <div class="code-file">
+                            <div class="html-file">
+                                <div class="html-file__label">HTML File:</div>
+                                <div class="html-file__code">
+                                    &lt;div&gt;
+                                    </br>
+                                    <span class="tabs__html"></span>&lt;p&gt;Paragraph1&lt;/p&gt;
+                                    </br>
+                                    <span class="tabs__html"></span>&lt;p&gt;Paragraph2&lt;/p&gt;
+                                    </br>
+                                    <span class="tabs__html"></span>&lt;p&gt;Paragraph3&lt;/p&gt;
+                                    </br>
+                                    <span class="tabs__html"></span>&lt;p&gt;Paragraph4&lt;/p&gt;
+                                    </br>
+                                    &lt;/div&gt;
+                                </div>
+                            </div>
+                            <div class="css-file">
+                                <div class="css-file__label">CSS File:</div>
+                                <div class="css-file__code">
+                                    p:nth-last-child(2) {
+                                    </br>
+                                    <span class="tabs__html"></span>color: <div class="block-color"></div>red;
+                                    </br>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <div class="example-result">
+                            <div class="example-result__label">Result:</div>
+                            <div class="example-result__show">
+                                <p>Paragraph1</p>
+                                <p>Paragraph2</p>
+                                <p>Paragraph3</p>
+                                <p>Paragraph4</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="ds">
                     <h3>Descendant Selector (element1 element2)</h3>
-                    <span>Ví dụ này sẽ chọn tất cả các <i><b>p</b></i> bên trong thẻ <i><b>div</b></i> được chỉ định</span>
-                    <div class="pl20">
-                        <p>Thẻ p 1.1</p>
-                        <p>Thẻ p 1.2</p>
-                        <p>Thẻ p 1.3</p>
-                        <p>Thẻ p 1.4</p>
+                    <span>The descendant selector matches all elements that are descendants (can be understood as inside) of a specified element.</span>
+                    </br>
+                    <div class="example">
+                        <div class="code-file">
+                            <div class="html-file">
+                                <div class="html-file__label">HTML File:</div>
+                                <div class="html-file__code">
+                                    &lt;div&gt;
+                                    </br>
+                                    <span class="tabs__html"></span>&lt;p&gt;Paragraph1&lt;/p&gt;
+                                    </br>
+                                    <span class="tabs__html"></span>&lt;p&gt;Paragraph2&lt;/p&gt;
+                                    </br>
+                                    <span class="tabs__html"></span>&lt;p&gt;Paragraph3&lt;/p&gt;
+                                    </br>
+                                    <span class="tabs__html"></span>&lt;p&gt;Paragraph4&lt;/p&gt;
+                                    </br>
+                                    <span class="tabs__html"></span>&lt;div class="div-example"&gt;
+                                    </br>
+                                    <span class="tabs__html"></span><span class="tabs__html"></span>&lt;p&gt;Paragraph1&lt;/p&gt;
+                                    </br>
+                                    <span class="tabs__html"></span><span class="tabs__html"></span>&lt;p&gt;Paragraph2&lt;/p&gt;
+                                    </br>
+                                    <span class="tabs__html"></span><span class="tabs__html"></span>&lt;p&gt;Paragraph3&lt;/p&gt;
+                                    </br>
+                                    <span class="tabs__html"></span><span class="tabs__html"></span>&lt;p&gt;Paragraph4&lt;/p&gt;
+                                    </br>
+                                    <span class="tabs__html"></span>&lt;/div&gt;
+                                    </br>
+                                    &lt;/div&gt;
+                                </div>
+                            </div>
+                            <div class="css-file">
+                                <div class="css-file__label">CSS File:</div>
+                                <div class="css-file__code">
+                                    div p {
+                                    </br>
+                                    <span class="tabs__html"></span>color: <div class="block-color"></div>red;
+                                    </br>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <div class="example-result">
+                            <div class="example-result__label">Result:</div>
+                            <div class="example-result__show">
+                                <p>Paragraph1</p>
+                                <p>Paragraph2</p>
+                                <p>Paragraph3</p>
+                                <p>Paragraph4</p>
+                                <div class="div-example">
+                                    <p>Paragraph1</p>
+                                    <p>Paragraph2</p>
+                                    <p>Paragraph3</p>
+                                    <p>Paragraph4</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="cs">
                     <h3>Child Selector (element1 > element2)</h3>
-                    <span>Ví dụ này sẽ chỉ chọn các <i><b>p</b></i> là con của thẻ <i><b>div</b></i> được chỉ định</span>
-                    <p class="pl20">Thẻ p 1.1</p>
-                    <p class="pl20">Thẻ p 1.2</p>
-                    <p class="pl20">Thẻ p 1.3</p>
-                    <p class="pl20">Thẻ p 1.4</p>
-                    <span>Các thẻ bên dưới nằm trong thẻ <i><b>div</b></i> là con của thẻ <i><b>div</b></i> được chỉ định</span>
-                    <div class="pl20">
-                        <p>Thẻ p 2.1</p>
-                        <p>Thẻ p 2.2</p>
-                        <p>Thẻ p 2.3</p>
-                        <p>Thẻ p 2.4</p>
+                    <span>The child selector selects all elements that are the children of a specified element.</span>
+                    </br>
+                    <div class="example">
+                        <div class="code-file">
+                            <div class="html-file">
+                                <div class="html-file__label">HTML File:</div>
+                                <div class="html-file__code">
+                                    &lt;div&gt;
+                                    </br>
+                                    <span class="tabs__html"></span>&lt;p&gt;Paragraph1&lt;/p&gt;
+                                    </br>
+                                    <span class="tabs__html"></span>&lt;p&gt;Paragraph2&lt;/p&gt;
+                                    </br>
+                                    <span class="tabs__html"></span>&lt;p&gt;Paragraph3&lt;/p&gt;
+                                    </br>
+                                    <span class="tabs__html"></span>&lt;p&gt;Paragraph4&lt;/p&gt;
+                                    </br>
+                                    <span class="tabs__html"></span>&lt;div class="div-example"&gt;
+                                    </br>
+                                    <span class="tabs__html"></span><span class="tabs__html"></span>&lt;p&gt;Paragraph1&lt;/p&gt;
+                                    </br>
+                                    <span class="tabs__html"></span><span class="tabs__html"></span>&lt;p&gt;Paragraph2&lt;/p&gt;
+                                    </br>
+                                    <span class="tabs__html"></span><span class="tabs__html"></span>&lt;p&gt;Paragraph3&lt;/p&gt;
+                                    </br>
+                                    <span class="tabs__html"></span><span class="tabs__html"></span>&lt;p&gt;Paragraph4&lt;/p&gt;
+                                    </br>
+                                    <span class="tabs__html"></span>&lt;/div&gt;
+                                    </br>
+                                    &lt;/div&gt;
+                                </div>
+                            </div>
+                            <div class="css-file">
+                                <div class="css-file__label">CSS File:</div>
+                                <div class="css-file__code">
+                                    div > p {
+                                    </br>
+                                    <span class="tabs__html"></span>color: <div class="block-color"></div>red;
+                                    </br>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <div class="example-result">
+                            <div class="example-result__label">Result:</div>
+                            <div class="example-result__show">
+                                <p>Paragraph1</p>
+                                <p>Paragraph2</p>
+                                <p>Paragraph3</p>
+                                <p>Paragraph4</p>
+                                <div class="div-example">
+                                    <p>Paragraph1</p>
+                                    <p>Paragraph2</p>
+                                    <p>Paragraph3</p>
+                                    <p>Paragraph4</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="ass">
                     <h3>Adjacent Sibling Selector (element1 + element2)</h3>
-                    <span>Ví dụ này sẽ chọn <i><b>p</b></i> ngay sau thẻ <i><b>div</b></i> được chỉ định</span>
-                    <div class="div-example pl20">Đây là div</div>
-                    <p class="pl20">Thẻ p 1.1</p>
-                    <p class="pl20">Thẻ p 1.2</p>
-                    <p class="pl20">Thẻ p 1.3</p>
-                    <p class="pl20">Thẻ p 1.4</p>
+                    <span>The adjacent sibling selector is used to select an element that is directly after (immediately following) another specific element.</span>
+                    </br>
+                    <div class="example">
+                        <div class="code-file">
+                            <div class="html-file">
+                                <div class="html-file__label">HTML File:</div>
+                                <div class="html-file__code">
+                                    &lt;div class="div-example"&gt;
+                                    </br>
+                                    <span class="tabs__html"></span>This is div
+                                    </br>
+                                    &lt;/div&gt;
+                                    </br>
+                                    </span>&lt;p&gt;Paragraph1&lt;/p&gt;
+                                    </br>
+                                    </span>&lt;p&gt;Paragraph2&lt;/p&gt;
+                                    </br>
+                                    </span>&lt;p&gt;Paragraph3&lt;/p&gt;
+                                    </br>
+                                    </span>&lt;p&gt;Paragraph4&lt;/p&gt;
+                                    </br>
+                                </div>
+                            </div>
+                            <div class="css-file">
+                                <div class="css-file__label">CSS File:</div>
+                                <div class="css-file__code">
+                                    div + p {
+                                    </br>
+                                    <span class="tabs__html"></span>color: <div class="block-color"></div>red;
+                                    </br>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <div class="example-result">
+                            <div class="example-result__label">Result:</div>
+                            <div class="example-result__show" id="ass-result">
+                                <div class="div-example">This is div</div>
+                                <p>Paragraph1</p>
+                                <p>Paragraph2</p>
+                                <p>Paragraph3</p>
+                                <p>Paragraph4</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="gss">
                     <h3>General Sibling Selector (element1 ~ element2)</h3>
-                    <span>Ví dụ này sẽ chọn tất cả các <i><b>p</b></i> phía sau thẻ <i><b>div</b></i> được chỉ định</span>
-                    <div class="div-example pl20">Đây là div</div>
-                    <p class="pl20">Thẻ p 1.1</p>
-                    <p class="pl20">Thẻ p 1.2</p>
-                    <p class="pl20">Thẻ p 1.3</p>
-                    <p class="pl20">Thẻ p 1.4</p>
+                    <span>The general sibling selector selects all elements that are next siblings of a specified element.</span>
+                    </br>
+                    <div class="example">
+                        <div class="code-file">
+                            <div class="html-file">
+                                <div class="html-file__label">HTML File:</div>
+                                <div class="html-file__code">
+                                    &lt;div class="div-example"&gt;
+                                    </br>
+                                    <span class="tabs__html"></span>This is div
+                                    </br>
+                                    &lt;/div&gt;
+                                    </br>
+                                    </span>&lt;p&gt;Paragraph1&lt;/p&gt;
+                                    </br>
+                                    </span>&lt;p&gt;Paragraph2&lt;/p&gt;
+                                    </br>
+                                    </span>&lt;p&gt;Paragraph3&lt;/p&gt;
+                                    </br>
+                                    </span>&lt;p&gt;Paragraph4&lt;/p&gt;
+                                    </br>
+                                </div>
+                            </div>
+                            <div class="css-file">
+                                <div class="css-file__label">CSS File:</div>
+                                <div class="css-file__code">
+                                    div ~ p {
+                                    </br>
+                                    <span class="tabs__html"></span>color: <div class="block-color"></div>red;
+                                    </br>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <div class="example-result">
+                            <div class="example-result__label">Result:</div>
+                            <div class="example-result__show" id="gss-result">
+                                <div class="div-example">This is div</div>
+                                <p>Paragraph1</p>
+                                <p>Paragraph2</p>
+                                <p>Paragraph3</p>
+                                <p>Paragraph4</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="ma1">
-                    <p>Làm cho các chữ trong thẻ <i><b>p</b></i> ở vị trí chia hết cho 3 thành màu <span class="drink">đỏ</span>:</p>
+                    <p>Using CSS Selector to make the letters inside tag <i><b>p</b></i> become <span style="color:red">red</span> at all positions that divisible by 3:</p>
                     <div class="ma1__block">
                         <div class="ma1__block__do-assignment">
                             <div class="code">
@@ -242,7 +642,7 @@
                                 </div> 
                                 <span>{</span>
                                 </br>
-                                <span class="tabs__html"></span><span> color: red;</span>
+                                <span class="tabs__html"></span><span> color: <div class="block-color"></div>red;</span>
                                 </br>
                                 <span>}</span>
                             </div>
@@ -257,7 +657,7 @@
                     </div>
                 </div>
                 <div class="ma2">
-                    <p>Sử dụng CSS Combinator để hoàn thành mong muốn:</p>
+                    <p>Using CSS Combinator to accomplish the desire:</p>
                     <div class="ma2__block pl20">
                         <table>
                             <tr>
@@ -281,19 +681,19 @@
                                         </div>
                                     </div>
                                 </td>
-                            <td>
-                                <div class="expected">
-                                    <span>Mong muốn:</span>
-                                    </br>
-                                    <img src="./expected.png" alt="expected">
-                                </div>
-                            </td>
+                                <td>
+                                    <div class="expected">
+                                        <span>Expectation:</span>
+                                        </br>
+                                        <img src="./expected.png" alt="expected">
+                                    </div>
+                                </td>
                             </tr>
                             <tr>
                                 <td>
                                     <div class="ma2__css">
                                         File CSS:
-                                        <div class="ma2__block">
+                                        <div class="ma2__css__block">
                                             <div class="ma2__css__code__form">
                                                 <div class="ma2__css__code">
                                                     <div class="class__item">
@@ -312,7 +712,7 @@
                                                         </div>
                                                         <span>{</span>
                                                         </br>
-                                                        <span class="tabs__html"></span>border-top: 1px solid grey;
+                                                        <span class="tabs__html"></span>border-top: 1px solid <div class="block-color block-color-grey"></div>grey;
                                                         </br>
                                                         <span>}</span>
                                                     </div>
@@ -327,7 +727,7 @@
                                 </td>
                                 <td id="actual">
                                     <div class="actual">
-                                        <span>Thực tế:</span>
+                                        <span>Actual:</span>
                                         <ul class="ulItem">
                                             <li class="item">Item1</li>
                                             <li class="item">Item2</li>

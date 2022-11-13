@@ -15,7 +15,8 @@ const listSidebar = [
 ];
 const ma1ResultList = ["nth-child(3n)", "nth-of-type(3n)"];
 const ma2ResultList = ["li~li", "li+li"];
-const ma2WrongList = [".item", "ul>li", "ulli"];
+const ma2WrongList = [".item", "ul>li", "ulli", "ul.item"];
+const nthChildStyleList = ["style-1", "style-2", "style-3"];
 
 function showPage(id) {
     listSidebar.forEach((e) => {
@@ -29,19 +30,6 @@ function showPage(id) {
         }
     });
 }
-
-// var string = "";
-// var classDrink = "";
-// var htmlColClassDrink = document.getElementsByClassName("drink");
-// var arrClassDrink = [].slice.call(htmlColClassDrink);
-// arrClassDrink.forEach((c) => {
-//     string += c.innerText + ", ";
-//     classDrink = string.substring(0, string.length - 2);
-// });
-// document.getElementById("class__drink").innerHTML = classDrink;
-
-// var idDrink = document.getElementById("drink").innerText;
-// document.getElementById("id__drink").innerHTML = idDrink;
 
 const tabsHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 var tabsHTMLList = document.getElementsByClassName("tabs__html");
@@ -67,7 +55,6 @@ ma1Result.addEventListener("keypress", (event) => {
 });
 
 function ma1Submit() {
-    console.log("ma1Result", ma1Result);
     if (ma1ResultList.includes(ma1Result.value)) {
         ma1Correct.style.display = "block";
         ma1Wrong.style.display = "none";
@@ -83,7 +70,6 @@ var ma2ListItem = document.getElementsByClassName("item");
 var arrMa2ListItemHTML = [].slice.call(ma2ListItem);
 
 function ma2Submit() {
-    console.log("input", ma2Result.value.replace(/\s/g, ""));
     if (ma2ResultList.includes(ma2Result.value.replace(/\s/g, ""))) {
         isTrue = true;
         arrMa2ListItemHTML.forEach((t) => {
@@ -137,6 +123,10 @@ function ma2Submit() {
     if (!isTrue && ma2Result.value.replace(/\s/g, "") == "ul~li") {
         ma2Result.value = "ul ~ li";
     }
+
+    if (!isTrue && ma2Result.value.replace(/\s/g, "") == "ul.item") {
+        ma2Result.value = "ul .item";
+    }
 }
 
 ma2Result.addEventListener("keypress", (event) => {
@@ -145,3 +135,17 @@ ma2Result.addEventListener("keypress", (event) => {
         document.getElementById("submit__button2").click();
     }
 });
+
+document.getElementById("style-1").classList.add("active-style");
+
+function ncButtonStyle(id) {
+    nthChildStyleList.forEach((s) => {
+        if (s == id) {
+            document.getElementById(s).classList.add("active-style")
+            document.getElementById(`${s}-result`).style.display = "block";
+        } else {
+            document.getElementById(s).classList.remove("active-style")
+            document.getElementById(`${s}-result`).style.display = "none";
+        }
+    })
+}
