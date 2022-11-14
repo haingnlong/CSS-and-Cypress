@@ -15,7 +15,7 @@ const listSidebar = [
 ];
 const ma1ResultList = ["nth-child(3n)", "nth-of-type(3n)"];
 const ma2ResultList = ["li~li", "li+li"];
-const ma2WrongList = [".item", "ul>li", "ulli", "ul.item"];
+const ma2WrongList = [".item", "ul>li", "ulli"];
 const nthChildStyleList = ["style-1", "style-2", "style-3"];
 
 function showPage(id) {
@@ -122,10 +122,6 @@ function ma2Submit() {
 
     if (!isTrue && ma2Result.value.replace(/\s/g, "") == "ul~li") {
         ma2Result.value = "ul ~ li";
-    }
-
-    if (!isTrue && ma2Result.value.replace(/\s/g, "") == "ul.item") {
-        ma2Result.value = "ul .item";
     }
 }
 

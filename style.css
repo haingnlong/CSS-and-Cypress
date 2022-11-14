@@ -1,5 +1,4 @@
 :root {
-    --red: #ff0b00;
     --purple: #673fd7;
     --bi: linear-gradient(
         92.88deg,
@@ -186,7 +185,7 @@ body {
 #ass-result > div + p,
 #gss-result > div ~ p,
 #ma1__wrong {
-    color: var(--red);
+    color: red;
 }
 
 .pl20 {
@@ -234,7 +233,7 @@ body {
     display: inline-block;
     height: 20px;
     width: 20px;
-    background-color: var(--red);
+    background-color: red;
     pointer-events: none;
 }
 
