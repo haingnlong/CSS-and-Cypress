@@ -312,9 +312,10 @@ body {
 
 .ma1__block {
     padding: 24px;
-    width: 350px;
+    width: 400px;
     position: absolute;
     left: 20%;
+    display: flex;
 }
 
 .code,
