@@ -9,11 +9,8 @@ describe("Now make your own test", () => {
         cy.get('.page').contains('First Child').invoke('text').then((text) => {
             expect(text.length).to.be.at.least(20)
         })
-        cy.get('.fc .example-result > .example-result__show p:first-child').invoke('text').then((text) => {
-            expect(text.length).to.eq(10);
-        })
+        cy.get('.fc .example-result > .example-result__show p:first-child').invoke('text').should('have.length', 10)
         cy.get('#css-selector-list').find('li').as('sidebar-button');
         cy.get('@sidebar-button').first().click();
     });
-
 });

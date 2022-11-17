@@ -49,8 +49,9 @@
                 </button>
                 <div id="css-assignment-list" class="css-list">
                     <ul>
-                        <li id="ma1" class="css-list__item" onclick="showPage(id)">CSS Selector Assignment</li>
-                        <li id="ma2" class="css-list__item" onclick="showPage(id)">CSS Combinator Assignment</li>
+                        <li id="ma1" class="css-list__item" onclick="showPage(id)">Assignment 1: CSS Selector</li>
+                        <li id="ma2" class="css-list__item" onclick="showPage(id)">Assignment 2: CSS Combinator</li>
+                        <li id="ma3" class="css-list__item" onclick="showPage(id)">Chịu</li>
                     </ul>
                 </div>
             </div>
@@ -639,7 +640,39 @@
                 <div class="ma1">
                     <p>Using CSS Selector to make the letters inside tag <i><b>p</b></i> become <span style="color:red">red</span> at all positions that divisible by 3:</p>
                     <div class="ma1__block">
-                        <div class="ma1__block__do-assignment">
+                        <div class="expectation-1">
+                            <span>Expectation:</span>
+                            </br>
+                            <img src="./expectation/expectation-1.png" alt="expectation-1">
+                        </div>
+                        <div class="ma1__html-file">
+                            <span>File HTML:</span>
+                            <div class="ma1__html-code">
+                                &lt;div&gt;
+                                </br>
+                                <span class="tabs__html"></span>&lt;p&gt;Paragraph1&lt;/p&gt;
+                                </br>
+                                <span class="tabs__html"></span>&lt;p&gt;Paragraph2&lt;/p&gt;
+                                </br>
+                                <span class="tabs__html"></span>&lt;p&gt;Paragraph3&lt;/p&gt;
+                                </br>
+                                <span class="tabs__html"></span>&lt;p&gt;Paragraph4&lt;/p&gt;
+                                </br>
+                                <span class="tabs__html"></span>&lt;p&gt;Paragraph5&lt;/p&gt;
+                                </br>
+                                <span class="tabs__html"></span>&lt;p&gt;Paragraph6&lt;/p&gt;
+                                </br>
+                                <span class="tabs__html"></span>&lt;p&gt;Paragraph7&lt;/p&gt;
+                                </br>
+                                <span class="tabs__html"></span>&lt;p&gt;Paragraph8&lt;/p&gt;
+                                </br>
+                                <span class="tabs__html"></span>&lt;p&gt;Paragraph9&lt;/p&gt;
+                                </br>
+                                &lt;/div&gt;
+                            </div>
+                        </div>
+                        <div class="ma1__css-code">
+                            <span>File CSS:</span>
                             <div class="code">
                                 <span>p:</span>
                                 <div class="custom">
@@ -656,7 +689,7 @@
                                 <button id="submit__button" onclick="ma1Submit()">Submit</button>
                             </div>
                         </div>
-                        <div class="ma1__block__check">
+                        <div class="ma1__css__check">
                             <span id="ma1__correct">&#10003;</span>
                             <span id="ma1__wrong">&#10008;</span>
                         </div>
@@ -688,10 +721,10 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="expected">
+                                    <div class="expectation-2">
                                         <span>Expectation:</span>
                                         </br>
-                                        <img src="./expected.png" alt="expected">
+                                        <img src="./expectation/expectation-2.png" alt="expectation-2">
                                     </div>
                                 </td>
                             </tr>
@@ -747,10 +780,15 @@
                         </table>
                     </div>
                 </div>
+                <div class="ma3">abc</div>
             </div>
         </div>
 
-        <script src="script.js"></script>
-        <script src="sidebar.js"></script>
+        <script src="js/sidebar.js"></script>
+        <script src="js/showPageContent.js"></script>
+        <script src="js/tabsHtml.js"></script>
+        <script src="js/cssSelecter/nthChild.js"></script>
+        <script src="js/assignment/assignment1.js"></script>
+        <script src="js/assignment/assignment2.js"></script>
     </body>
 </html>

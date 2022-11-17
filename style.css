@@ -138,6 +138,7 @@ body {
 .gss,
 .ma1,
 .ma2,
+.ma3,
 #ma1__correct,
 #ma1__wrong,
 #style-2-result,
@@ -215,7 +216,8 @@ body {
 .nc__css-style,
 #style-1-result,
 #style-2-result,
-#style-3-result {
+#style-3-result,
+.ma1__html-code {
     border: 3px solid rgba(128, 128, 128, 0.281);
     border-radius: 12px;
     padding: 24px;
@@ -312,10 +314,24 @@ body {
 
 .ma1__block {
     padding: 24px;
-    width: 450px;
-    position: absolute;
-    left: 20%;
     display: flex;
+}
+
+.ma1__block > div {
+    margin-left: 48px;
+}
+
+.ma1__css-code {
+    white-space: nowrap;
+}
+
+#ma1__correct,
+#ma1__wrong {
+    font-size: 72px;
+}
+
+#ma1__correct {
+    color: green;
 }
 
 .code,
@@ -335,15 +351,6 @@ body {
 input {
     font-size: 24px;
     width: 160px;
-}
-
-#ma1__correct,
-#ma1__wrong {
-    font-size: 72px;
-}
-
-#ma1__correct {
-    color: green;
 }
 
 .submit {
@@ -376,7 +383,7 @@ input {
     border-radius: 12px;
 }
 
-.ma1__block__check {
+.ma1__css__check {
     margin-left: 24px;
 }
 
@@ -384,11 +391,11 @@ input {
     margin-top: 30px;
 }
 
-.expected {
+.expectation-2 {
     margin-left: 96px;
 }
 
-.expected > img {
+.expectation-1 > img, .expectation-2 > img {
     border: 3px solid rgba(128, 128, 128, 0.281);
     border-radius: 12px;
     margin-left: 24px;
@@ -465,4 +472,18 @@ input[class*="custom-input"]:focus {
 
 .tabs__html {
     pointer-events: none;
+}
+
+
+
+
+
+
+
+.page__background {
+    display: none;
+}
+
+.ma1 {
+    display: block;
 }
