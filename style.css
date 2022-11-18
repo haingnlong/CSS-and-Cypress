@@ -1,11 +1,9 @@
 :root {
     --purple: #673fd7;
-    --bi: linear-gradient(
-        92.88deg,
-        #455eb5 9.16%,
-        #5643cc 43.89%,
-        #673fd7 64.72%
-    );
+    --bi: linear-gradient(92.88deg,
+            #455eb5 9.16%,
+            #5643cc 43.89%,
+            #673fd7 64.72%);
 }
 
 body {
@@ -17,7 +15,7 @@ body {
     display: flex;
 }
 
-.sidebar {
+#sidebar {
     flex: 1;
     padding: 24px;
     min-height: calc(100vh - 48px);
@@ -25,12 +23,16 @@ body {
     background: var(--bi);
 }
 
-.sidebar ul {
+#sidebar ul {
     margin-top: 6px;
 }
 
-.sidebar > button:nth-of-type(n + 2) {
+#sidebar>button:nth-of-type(n + 2) {
     margin-top: 24px;
+}
+
+#sidebar>button+button {
+    border-top: 1px solid gray;
 }
 
 .sidebar-button {
@@ -99,7 +101,7 @@ body {
     box-shadow: 0 9px 47px 11px rgba(51, 51, 51, 0.18);
 }
 
-.css-list li + li {
+.css-list li+li {
     margin-top: 6px;
     padding-top: 6px;
 }
@@ -121,10 +123,6 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-.sidebar > button + button {
-    border-top: 1px solid gray;
-}
-
 .cvi,
 .fc,
 .lc,
@@ -139,10 +137,12 @@ body {
 .ma1,
 .ma2,
 .ma3,
+#style-2-result,
+#style-3-result,
 #ma1__correct,
 #ma1__wrong,
-#style-2-result,
-#style-3-result {
+#ma3__correct,
+#ma3__wrong {
     display: none;
 }
 
@@ -175,17 +175,19 @@ body {
 
 .fc p:first-child,
 .lc p:last-child,
-.nc .example-result > #style-1-result p:nth-child(2),
-.nc .example-result > #style-2-result p:nth-child(odd),
-.nc .example-result > #style-3-result p:nth-child(n + 4),
+.nc .example-result>#style-1-result p:nth-child(2),
+.nc .example-result>#style-2-result p:nth-child(odd),
+.nc .example-result>#style-3-result p:nth-child(n + 4),
 .nlc p:nth-last-child(2),
 .not p:nth-of-type(2),
 .nlot p:nth-last-of-type(2),
 .ds p,
-.cs .example-result__show > p,
-#ass-result > div + p,
-#gss-result > div ~ p,
-#ma1__wrong {
+.cs .example-result__show>p,
+#ass-result>div+p,
+#gss-result>div~p,
+#ma1__wrong,
+#ma3__wrong,
+.red-text {
     color: red;
 }
 
@@ -206,18 +208,18 @@ body {
     margin-bottom: 48px;
 }
 
-.code-file > div > div:first-child {
+.code-file>div>div:first-child {
     margin-bottom: 24px;
 }
 
-.code-file > div > div:last-child,
+.code-file>div>div:last-child,
 .example-result__show,
 .nc__html-file__code,
 .nc__css-style,
 #style-1-result,
 #style-2-result,
 #style-3-result,
-.ma1__html-code {
+.ma__html-code {
     border: 3px solid rgba(128, 128, 128, 0.281);
     border-radius: 12px;
     padding: 24px;
@@ -243,6 +245,10 @@ body {
     background-color: grey;
 }
 
+.block-color-green {
+    background-color: green;
+}
+
 .example-result__show {
     padding: 12px 72px;
 }
@@ -255,7 +261,7 @@ body {
     justify-content: space-around;
 }
 
-.nc__example > div:first-child {
+.nc__example>div:first-child {
     margin-left: 24px;
 }
 
@@ -304,7 +310,8 @@ body {
 }
 
 .ma1,
-.ma2 {
+.ma2,
+.ma3 {
     font-size: 24px;
 }
 
@@ -312,25 +319,26 @@ body {
     position: relative;
 }
 
-.ma1__block {
+.ma__block {
     padding: 24px;
     display: flex;
 }
 
-.ma1__block > div {
+.ma__block>div {
     margin-left: 48px;
 }
 
-.ma1__css-code {
+.ma__css-block {
     white-space: nowrap;
 }
 
-#ma1__correct,
-#ma1__wrong {
+.submitIcon {
     font-size: 72px;
 }
 
-#ma1__correct {
+#ma1__correct,
+#ma3__correct,
+.green-text {
     color: green;
 }
 
@@ -358,8 +366,9 @@ input {
     padding: 24px 40px;
 }
 
-#submit__button,
-#submit__button2 {
+#submit__button1,
+#submit__button2,
+#submit__button3 {
     background-image: var(--bi);
     border-style: none;
     box-sizing: border-box;
@@ -372,7 +381,7 @@ input {
     font-size: 16px;
     font-weight: 500;
     height: 50px;
-    width: 100%;
+    width: 160px;
     padding: 0 1.6rem;
     text-align: center;
     text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
@@ -381,6 +390,7 @@ input {
     -webkit-user-select: none;
     touch-action: manipulation;
     border-radius: 12px;
+    margin: 0 auto;
 }
 
 .ma1__css__check {
@@ -395,7 +405,7 @@ input {
     margin-left: 96px;
 }
 
-.expectation-1 > img, .expectation-2 > img {
+img {
     border: 3px solid rgba(128, 128, 128, 0.281);
     border-radius: 12px;
     margin-left: 24px;
@@ -417,7 +427,7 @@ input {
     margin-top: 5px;
 }
 
-.actual .correct-answer ~ .correct-answer,
+.actual .correct-answer~.correct-answer,
 .input-item {
     border-top: 1px solid grey;
 }
@@ -460,8 +470,8 @@ input[class*="custom-input"]:focus {
     font-size: 14px;
 }
 
-.custom-input:not(:placeholder-shown) + .custom-label,
-.custom-input:focus + .custom-label {
+.custom-input:not(:placeholder-shown)+.custom-label,
+.custom-input:focus+.custom-label {
     top: -10px;
     left: 18px;
     padding: 0 10px;
@@ -470,20 +480,48 @@ input[class*="custom-input"]:focus {
     color: #6a5af9;
 }
 
+.ma__grid {
+    display: grid;
+    grid-template-columns: min-content max-content min-content;
+    padding: 0 24px;
+    column-gap: 96px;
+    row-gap: 48px;
+}
+.assignment-form {
+    display: flex;
+    justify-content: flex-end;;
+    flex-direction: column;
+}
+
+.assignment-form > .submit {
+    padding-bottom: 0;
+}
+
+#checkboxesGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+#checkboxesGroup span {
+    display: flex;
+    align-items: center;
+}
+
+.customCheckbox {
+    font-size: 24px;
+    height: 24px;
+    width: 24px;
+    margin-right: 24px;
+}
+
 .tabs__html {
     pointer-events: none;
 }
 
-
-
-
-
-
+.ma3 {
+    display: block;
+}
 
 .page__background {
     display: none;
-}
-
-.ma1 {
-    display: block;
 }

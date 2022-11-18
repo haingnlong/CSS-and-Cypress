@@ -3,9 +3,9 @@ const ma2ResultList = ["li~li", "li+li"];
 const ma2WrongList = [".item", "ul>li", "ulli"];
 
 const ma2Result = document.getElementById("ma2__answer");
-var isTrue = false;
-var ma2ListItem = document.getElementsByClassName("item");
-var arrMa2ListItemHTML = [].slice.call(ma2ListItem);
+let isTrue = false;
+let ma2ListItem = document.getElementsByClassName("item");
+let arrMa2ListItemHTML = [].slice.call(ma2ListItem);
 
 function ma2Submit() {
     if (ma2ResultList.includes(ma2Result.value.replace(/\s/g, ""))) {
@@ -29,38 +29,6 @@ function ma2Submit() {
             });
         }
     }
-
-    if (isTrue && ma2Result.value.replace(/\s/g, "") == "li+li") {
-        ma2Result.value = "li + li";
-    }
-
-    if (isTrue && ma2Result.value.replace(/\s/g, "") == "li~li") {
-        ma2Result.value = "li ~ li";
-    }
-
-    if (!isTrue && ma2Result.value.replace(/\s/g, "") == "lili") {
-        ma2Result.value = "li li";
-    }
-
-    if (!isTrue && ma2Result.value.replace(/\s/g, "") == "li>li") {
-        ma2Result.value = "li > li";
-    }
-
-    if (!isTrue && ma2Result.value.replace(/\s/g, "") == "ulli") {
-        ma2Result.value = "ul li";
-    }
-
-    if (!isTrue && ma2Result.value.replace(/\s/g, "") == "ul>li") {
-        ma2Result.value = "ul > li";
-    }
-
-    if (!isTrue && ma2Result.value.replace(/\s/g, "") == "ul+li") {
-        ma2Result.value = "ul + li";
-    }
-
-    if (!isTrue && ma2Result.value.replace(/\s/g, "") == "ul~li") {
-        ma2Result.value = "ul ~ li";
-    }
 }
 
 ma2Result.addEventListener("keypress", (event) => {
@@ -70,3 +38,8 @@ ma2Result.addEventListener("keypress", (event) => {
     }
 });
 
+liButtonList.forEach((li) => {
+    li.addEventListener("click", (event) => {
+        
+    })
+})

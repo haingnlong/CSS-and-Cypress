@@ -29,3 +29,28 @@ function showList(buttonId) {
         }
     })
 }
+
+//delete result
+var liButtonList = [].slice.call(document.getElementById("sidebar").getElementsByTagName("li"));
+
+liButtonList.forEach((li) => {
+    li.addEventListener("click", (event) => {
+        ma1Result.value = "";
+        ma1Correct.style.display = "none";
+        ma1Wrong.style.display = "none";
+
+        ma2Result.value = "";
+        arrMa2ListItemHTML.forEach((t) => {
+            t.classList.remove("correct-answer");
+            t.classList.remove("input-item");
+        });
+
+        for (let i = 0; checkboxes.getElementsByTagName("input")[i]; i++) {
+            if (checkboxes.getElementsByTagName("input")[i].checked) {
+                checkboxes.getElementsByTagName("input")[i].checked = false;
+                ma3Correct.style.display = "none";
+                ma3Wrong.style.display = "none";
+            }
+        }
+    })
+})

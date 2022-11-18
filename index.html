@@ -13,7 +13,7 @@
     </head>
     <body>
         <div class="container">
-            <div class="sidebar">
+            <div id="sidebar">
                 <button id="css-selector" class="sidebar-button" onclick="showList(id)">
                     <span>CSS Selector</span>
                     <div id="css-selector-arrow"></div>
@@ -49,9 +49,9 @@
                 </button>
                 <div id="css-assignment-list" class="css-list">
                     <ul>
-                        <li id="ma1" class="css-list__item" onclick="showPage(id)">Assignment 1: CSS Selector</li>
-                        <li id="ma2" class="css-list__item" onclick="showPage(id)">Assignment 2: CSS Combinator</li>
-                        <li id="ma3" class="css-list__item" onclick="showPage(id)">Chịu</li>
+                        <li id="ma1" class="css-list__item" onclick="showPage(id)">Assignment 1</li>
+                        <li id="ma2" class="css-list__item" onclick="showPage(id)">Assignment 2</li>
+                        <li id="ma3" class="css-list__item" onclick="showPage(id)">Assignment 3</li>
                     </ul>
                 </div>
             </div>
@@ -638,16 +638,16 @@
                     </div>
                 </div>
                 <div class="ma1">
-                    <p>Using CSS Selector to make the letters inside tag <i><b>p</b></i> become <span style="color:red">red</span> at all positions that divisible by 3:</p>
-                    <div class="ma1__block">
+                    <p>Using CSS Selector to make the letters inside <i><b>p</b></i> become <span style="color:red">red</span> at all positions that divisible by 3:</p>
+                    <div class="ma__block">
                         <div class="expectation-1">
                             <span>Expectation:</span>
                             </br>
                             <img src="./expectation/expectation-1.png" alt="expectation-1">
                         </div>
-                        <div class="ma1__html-file">
+                        <div class="ma__html-file">
                             <span>File HTML:</span>
-                            <div class="ma1__html-code">
+                            <div class="ma__html-code">
                                 &lt;div&gt;
                                 </br>
                                 <span class="tabs__html"></span>&lt;p&gt;Paragraph1&lt;/p&gt;
@@ -671,7 +671,7 @@
                                 &lt;/div&gt;
                             </div>
                         </div>
-                        <div class="ma1__css-code">
+                        <div class="ma__css-block">
                             <span>File CSS:</span>
                             <div class="code">
                                 <span>p:</span>
@@ -686,12 +686,12 @@
                                 <span>}</span>
                             </div>
                             <div class="submit">
-                                <button id="submit__button" onclick="ma1Submit()">Submit</button>
+                                <button id="submit__button1" onclick="ma1Submit()">Submit</button>
                             </div>
                         </div>
                         <div class="ma1__css__check">
-                            <span id="ma1__correct">&#10003;</span>
-                            <span id="ma1__wrong">&#10008;</span>
+                            <span id="ma1__correct" class="submitIcon">&#10003;</span>
+                            <span id="ma1__wrong" class="submitIcon">&#10008;</span>
                         </div>
                     </div>
                 </div>
@@ -780,7 +780,81 @@
                         </table>
                     </div>
                 </div>
-                <div class="ma3">abc</div>
+                <div class="ma3">
+                    <p>Turn <i><b>p</b></i> with suffix 1.* to <span style="color:red">red</span> and <i><b>p</b></i> with suffix 2.* to <span style="color:green">green</span>:</p>
+                    <div class="ma__grid pl20">
+                        <div class="ma__html-file">
+                            <span>File HTML:</span>
+                            <div class="ma__html-code">
+                                </span>&lt;div class="container"&gt;
+                                </br>
+                                <span class="tabs__html"></span>&lt;article id="news"&gt;
+                                </br>
+                                <span class="tabs__html"></span><span class="tabs__html"></span>&lt;p&gt;Paragraph1.1&lt;/p&gt;
+                                </br>
+                                <span class="tabs__html"></span><span class="tabs__html"></span>&lt;p&gt;Paragraph1.2&lt;/p&gt;
+                                </br>
+                                <span class="tabs__html"></span><span class="tabs__html"></span>&lt;p&gt;Paragraph1.3&lt;/p&gt;
+                                </br>
+                                <span class="tabs__html"></span><span class="tabs__html"></span>&lt;div class="details"&gt;
+                                </br>
+                                <span class="tabs__html"></span><span class="tabs__html"></span><span class="tabs__html"></span>&lt;p&gt;Paragraph2.1&lt;/p&gt;
+                                </br>
+                                <span class="tabs__html"></span><span class="tabs__html"></span><span class="tabs__html"></span>&lt;p&gt;Paragraph2.2&lt;/p&gt;
+                                </br>
+                                <span class="tabs__html"></span><span class="tabs__html"></span><span class="tabs__html"></span>&lt;p&gt;Paragraph2.3&lt;/p&gt;
+                                </br>
+                                <span class="tabs__html"></span><span class="tabs__html"></span>&lt;/div&gt;
+                                </br>
+                                <span class="tabs__html"></span>&lt;/article&gt;
+                                </br>
+                                </span>&lt;/div&gt;
+                            </div>
+                        </div>
+                        <div class="expectation-3">
+                            <span>Expectation:</span>
+                            </br>
+                            <img src="./expectation/expectation-3.png" alt="expectation-3">
+                        </div>
+                        <div></div>
+                        <div class="ma3__css-file">
+                            <span>File CSS:</span>
+                            <div class="code">
+                                _________
+                                <span>{</span>
+                                </br>
+                                <span class="tabs__html"></span><span> color: <div class="block-color"></div>red;</span>
+                                </br>
+                                <span>}</span>
+                                </br>
+                                _________
+                                <span>{</span>
+                                </br>
+                                <span class="tabs__html"></span><span> color: <div class="block-color block-color-green"></div>green;</span>
+                                </br>
+                                <span>}</span>
+                                </br>
+                            </div>
+                        </div>
+                        <div class="assignment-form">
+                            <div id="checkboxesGroup">
+                                <span><input type="checkbox" class="customCheckbox" value="1" /><i class="red-text">article ~ p</i><span class="tabs__html"></span>and<span class="tabs__html"></span><i class="green-text">article ~ div ~ p</i></span>
+                                <span><input type="checkbox" class="customCheckbox" value="2" /><i class="red-text">div > article p</i><span class="tabs__html"></span>and<span class="tabs__html"></span><i class="green-text">div > article div + p</i></span>
+                                <span><input type="checkbox" class="customCheckbox" value="3" /><i class="red-text">div > article > p</i><span class="tabs__html"></span>and<span class="tabs__html"></span><i class="green-text">.container > #news > .details > p</i></span>
+                                <span><input type="checkbox" class="customCheckbox" value="4" /><i class="red-text">#container > article > p</i><span class="tabs__html"></span>and<span class="tabs__html"></span><i class="green-text">article div p</i></span>
+                                <span><input type="checkbox" class="customCheckbox" value="5" /><i class="red-text">div article > p</i><span class="tabs__html"></span>and<span class="tabs__html"></span><i class="green-text">div articel div p</i></span>
+                                <span><input type="checkbox" class="customCheckbox" value="6" /><i class="red-text">.container article > p</i><span class="tabs__html"></span>and<span class="tabs__html"></span><i class="green-text">article detail p</i></span>
+                            </div>
+                            <div class="submit">
+                                <button id="submit__button3" onclick="ma3Submit()">Submit</button>
+                            </div>
+                        </div>
+                        <div class="ma3__css__check">
+                            <span id="ma3__correct" class="submitIcon">&#10003;</span>
+                            <span id="ma3__wrong" class="submitIcon">&#10008;</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -790,5 +864,6 @@
         <script src="js/cssSelecter/nthChild.js"></script>
         <script src="js/assignment/assignment1.js"></script>
         <script src="js/assignment/assignment2.js"></script>
+        <script src="js/assignment/assignment3.js"></script>
     </body>
 </html>
