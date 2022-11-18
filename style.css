@@ -517,11 +517,3 @@ input[class*="custom-input"]:focus {
 .tabs__html {
     pointer-events: none;
 }
-
-.ma3 {
-    display: block;
-}
-
-.page__background {
-    display: none;
-}
